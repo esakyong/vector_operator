@@ -1,3 +1,5 @@
+import math
+
 class Vector:
     def __init__(self, elements = []):
         self.elements = list(elements)
@@ -83,11 +85,29 @@ def zero(n = 3):
         result.append(0)
     return result
 
-def vsum(*args):
+def sum(*args):
     result = zero(len(args[0]))
     for i in [arg for arg in args]:
         result += i
     return result
+
+def sin(x):
+    if type(x) == Vector:
+        return Vector(map(math.sin, x))
+    else:
+        return math.sin(x)
+
+def cos(x):
+    if type(x) == Vector:
+        return Vector(map(math.cos, x))
+    else:
+        return math.cos(x)
+
+def tan(x):
+    if type(x) == Vector:
+        return Vector(map(math.tan, x))
+    else:
+        return math.tan(x)
 
 def funcForVec(func):
     def applyToElement(*vecs):

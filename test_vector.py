@@ -5,4 +5,5 @@ b = Vector([3, 4, 5])
 c = [1 ,1 ,1]
 
 
-print(any(a))
+print(sin(b))
+print(sin(1))
