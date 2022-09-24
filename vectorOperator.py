@@ -85,7 +85,7 @@ def zero(n = 3):
         result.append(0)
     return result
 
-def sum(*args):
+def vsum(*args):
     result = zero(len(args[0]))
     for i in [arg for arg in args]:
         result += i
