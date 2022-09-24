@@ -60,7 +60,7 @@ class Vector:
         return other*(self*other/(other*other))
     #iterator
     def __iter__(self):
-        return self#.elements#[self.current]
+        return self
     def __next__(self):
         if self.current < len(self.elements):
             self.current += 1
